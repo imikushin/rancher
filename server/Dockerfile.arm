@@ -25,14 +25,7 @@ ADD https://github.com/imikushin/cluster-manager/releases/download/v0.1.4_arm/cl
 RUN chmod +x /usr/bin/giddyup /usr/bin/cluster-manager
 COPY bin/* /usr/bin/
 
-ENV CATTLE_AGENT_INSTANCE_IMAGE=rancher/agent-instance:v0.8.1_arm \
-    CATTLE_BOOTSTRAP_REQUIRED_IMAGE=rancher/agent:v1.0.1_arm \
-    DEFAULT_CATTLE_AGENT_PACKAGE_RANCHER_DNS_URL=https://github.com/imikushin/rancher-dns/releases/download/v0.9.2_arm/rancher-dns.tar.gz \
-    DEFAULT_CATTLE_AGENT_PACKAGE_RANCHER_METADATA_URL=https://github.com/imikushin/rancher-metadata/releases/download/v0.5.1_arm/rancher-metadata.tar.gz \
-    DEFAULT_CATTLE_AGENT_PACKAGE_HOST_API_URL=https://github.com/imikushin/host-api/releases/download/v0.30.1_arm/host-api.tar.gz \
-    DEFAULT_CATTLE_AGENT_PACKAGE_RANCHER_NET_URL=https://github.com/imikushin/rancher-net/releases/download/v0.3.2_arm/rancher-net.tar.gz \
-    DEFAULT_CATTLE_AGENT_PACKAGE_CADVISOR_URL=https://github.com/imikushin/cadvisor-package/releases/download/v0.22.0-1_arm/cadvisor.tar.gz \
-    DEFAULT_CATTLE_SERVICE_PACKAGE_CATALOG_URL=https://github.com/imikushin/rancher-catalog-service/releases/download/v0.6.1_arm/rancher-catalog-service.tar.xz \
+ENV DEFAULT_CATTLE_SERVICE_PACKAGE_CATALOG_URL=https://github.com/imikushin/rancher-catalog-service/releases/download/v0.6.1_arm/rancher-catalog-service.tar.xz \
     DEFAULT_CATTLE_SERVICE_PACKAGE_COMPOSE_EXECUTOR_URL=https://releases.rancher.com/compose/v0.8.1/binaries/linux-arm/rancher-compose.gz,rancher-compose-executor \
     DEFAULT_CATTLE_SERVICE_PACKAGE_WEBSOCKET_PROXY_URL=https://github.com/imikushin/websocket-proxy/releases/download/v0.16.4_arm/websocket-proxy.tar.xz \
     DEFAULT_CATTLE_SERVICE_PACKAGE_GO_MACHINE_SERVICE_URL=https://github.com/imikushin/go-machine-service/releases/download/v0.29.2_arm/go-machine-service.tar.xz \
